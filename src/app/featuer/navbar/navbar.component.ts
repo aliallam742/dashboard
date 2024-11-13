@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, signal } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-import { provideNativeDateAdapter } from '@angular/material/core';
 import { CalendarModule } from 'primeng/calendar';
 
 @Component({
