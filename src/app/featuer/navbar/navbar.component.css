@@ -1,0 +1,98 @@
+.navbar {
+    padding-block: 20px;
+    align-items: center;
+    display: flex;
+}
+
+:root {
+    --mdc-filled-text-field-container-color: #FFF !important
+}
+
+.nave-group {
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #FF7F5C;
+    border-radius: 50%;
+}
+
+.calender-icon {
+    font-size: 20px;
+    color: #ff7f5c;
+    margin-inline-end: 5px;
+}
+
+.fa-solids {
+    font-size: 30px;
+    transform: rotateY(10deg) rotateX(178deg) rotate(102deg);
+}
+
+.group-number {
+    text-align: left;
+    font: normal normal normal 32px/6px Roboto;
+    letter-spacing: 0px;
+    color: #3D5161;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.toggle {
+    background-color: #F9F5F3;
+    border-radius: 50px;
+}
+
+.mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard,
+.mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard {
+    background-color: none;
+    border: none;
+}
+
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard:not([class*=mat-elevation-z]),
+.mat-button-toggle-group-appearance-standard:not([class*=mat-elevation-z]) {
+    border: none;
+}
+
+.mat-button-toggle-appearance-standard {
+    background-color: transparent;
+    padding-inline: 5px;
+}
+
+.toggle-menue {
+    background-color: #F9F5F3;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+:host ::ng-deep .p-inputtext {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    outline: unset;
+}
+
+
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    padding: 14px !important;
+    border-radius: 50%;
+}
+
+.mat-button-toggle-checked {
+    background-color: #FF7F5C !important;
+    color: white !important;
+    border-radius: 30px;
+}
+
+.group-text {
+    text-align: left;
+    font: normal normal normal 16px/15px Roboto;
+    color: #3D5161;
+    font-weight: 500;
+    opacity: 1;
+    width: 30%;
+    text-wrap: wrap;
+}
