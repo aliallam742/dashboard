@@ -1,0 +1,58 @@
+.station-card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.station-name {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.station-subtitle {
+    position: relative;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.station-subtitle::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 10px;
+    opacity: .2;
+    height: 2px;
+    background-color: #000;
+}
+
+.data-label {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.list {
+    overflow: auto;
+    height: 400px;
+}
+
+.list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+    background-color: #F4DBD4;
+    border-radius: 10px;
+
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #fF7F5C;
+    border-radius: 10px;
+}
+
+.data-value {
+    font-size: 1.2em;
+}

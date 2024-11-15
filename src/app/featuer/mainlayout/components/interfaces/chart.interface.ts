@@ -6,7 +6,8 @@ import {
     ApexTitleSubtitle,
     ApexStroke,
     ApexYAxis,
-    ApexPlotOptions
+    ApexPlotOptions,
+    ApexMarkers
 } from 'ng-apexcharts';
 export type ChartOptions = {
     series: ApexAxisChartSeries;
@@ -17,4 +18,6 @@ export type ChartOptions = {
     dataLabels: ApexDataLabels;
     stroke: ApexStroke;
     title: ApexTitleSubtitle;
+    markers: ApexMarkers,
+    labels: any,
 };
