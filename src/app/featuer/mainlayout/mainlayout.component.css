@@ -30,6 +30,13 @@
 }
 
 
+.main {
+    height: 88vh;
+}
+
+.outlet {
+    height: 300px;
+}
 
 .value {
     color: #FF7F5C;

@@ -19,7 +19,7 @@ export class GraphComponent {
       series: [
         {
           color: '#FF7F5C',
-          data: [0, 250, 140, 200, 230, 140, 0],
+          data: [250, 140, 200, 230, 140],
 
         }
       ],
@@ -32,8 +32,7 @@ export class GraphComponent {
       },
       plotOptions: {
         bar: {
-          columnWidth: '10px',
-
+          columnWidth: '30%',
         }
 
       },
@@ -44,17 +43,21 @@ export class GraphComponent {
       },
       xaxis: {
         labels: {
-          show: true,
 
+          show: true,
+          rotateAlways: false,
+          style: {
+            cssClass: 'text-wrap',
+            fontSize: '11px'
+          }
         },
         categories: [
-          "",
           "JStation Name Dummy 1",
           "Station Name Dummy 1",
           "Station Name Dummy 1",
           "Station Name Dummy 1",
           "Station Name Dummy 1",
-          ""
+
 
         ]
       },

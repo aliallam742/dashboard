@@ -1,43 +1,90 @@
-<div>
-    <section>
-        <div class="container-fluid px-4">
-            <div class="fixed-section d-flex justify-content-around">
-                @for (card of cardData; track card.mony) {
-                <div class="card  p-4" [class.selected]="card.isSelected">
-                    <div class="d-flex align-items-center">
-                        <span class="mony">{{card.mony}}</span>
-                        <span class="currency">{{card.currency}} <sup>{{card.sup}}</sup></span>
-                    </div>
-                    <div>
-                        <span class="value-text">{{card.valueText}}</span>
-                        <div class="value" [class.arrow-up]="card.isUp">
-                            <span class="icon"><i [class]="card.icon"></i></span>
-                            <span class="number ms-2">{{card.number}} </span>
-                            <span class="symbols">{{card.symbols}} <sup>{{card.supSym}}</sup></span>
+<div class="container-fluid main overflow-hidden">
+    <div class="row">
+        <section class="col-md-9 ">
+            <div class="container-fluid ">
+                <div class="fixed-section d-flex justify-content-between">
+                    @for (card of cardData; track card.mony) {
+                    <div class="card  p-4" [class.selected]="card.isSelected">
+                        <div class="d-flex align-items-center">
+                            <span class="mony">{{card.mony}}</span>
+                            <span class="currency">{{card.currency}} <sup>{{card.sup}}</sup></span>
+                        </div>
+                        <div>
+                            <span class="value-text">{{card.valueText}}</span>
+                            <div class="value" [class.arrow-up]="card.isUp">
+                                <span class="icon"><i [class]="card.icon"></i></span>
+                                <span class="number ms-2">{{card.number}} </span>
+                                <span class="symbols">{{card.symbols}} <sup>{{card.supSym}}</sup></span>
+                            </div>
                         </div>
                     </div>
+                    }
+
                 </div>
-                }
-
+                <div class="d-flex my-3 justify-content-end px-5 ">
+                    <section class="toggle-menue">
+                        <mat-button-toggle-group name="dateToggle" aria-label="Date Filter" class="date-toggle-group"
+                            [value]="toggleValue" [hideSingleSelectionIndicator]="true" (change)="change($event)">
+                            <mat-button-toggle routerLink="graph" value="/mainlayout/graph"><i
+                                    class="fa-solid mx-2 fa-chart-simple"></i>
+                                GRAPH</mat-button-toggle>
+                            <mat-button-toggle routerLink="list" value="/mainlayout/list"><i
+                                    class="fa-solid mx-2 fa-bars"></i>LIST</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </section>
+                </div>
             </div>
-            <div class="d-flex my-3 justify-content-end px-5 ">
-                <section class="toggle-menue">
-                    <mat-button-toggle-group name="dateToggle" aria-label="Date Filter" class="date-toggle-group"
-                        value="GRAPH" [hideSingleSelectionIndicator]="true">
-                        <mat-button-toggle routerLink="graph" value="GRAPH"><i
-                                class="fa-solid mx-2 fa-chart-simple"></i>
-                            GRAPH</mat-button-toggle>
-                        <mat-button-toggle routerLink="list" value="LIST"><i
-                                class="fa-solid mx-2 fa-bars"></i>LIST</mat-button-toggle>
-                    </mat-button-toggle-group>
-                </section>
+            <div class="outlet">
+                <router-outlet></router-outlet>
             </div>
-        </div>
-        <div>
-            <router-outlet></router-outlet>
-        </div>
-    </section>
-    <section>
-
-    </section>
+        </section>
+        <section class="col-md-3 overflow-hidden d-flex align-items-center flex-column justify-content-center">
+            <div id="chart">
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                    [title]="chartOptions.title"></apx-chart>
+            </div>
+            <div class="w-100">
+                <div class="list text-center w-100 px-3">
+                    <h5>Sales by Station</h5>
+                    <div class="d-flex align-items-center my-2">
+                        <img src="../../../assets/images/navbar-images/gas-station-svgrepo-com.svg" alt="">
+                        <div class="text d-flex w-100 justify-content-between">
+                            <div>Station
+                                Name</div>
+                            <div>62,721m<sup>2</sup></div>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <p-progressBar showValue="false" color="#FF7F5C" [value]="50" />
+                    </div>
+                </div>
+                <div class="list text-center w-100 px-3">
+                    <div class="d-flex align-items-center my-2">
+                        <img src="../../../assets/images/navbar-images/gas-station-svgrepo-com.svg" alt="">
+                        <div class="text d-flex w-100 justify-content-between">
+                            <div>Station
+                                Name</div>
+                            <div>62,721m<sup>2</sup></div>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <p-progressBar showValue="false" color="#FF7F5C" [value]="50" />
+                    </div>
+                </div>
+                <div class="list text-center w-100 px-3">
+                    <div class="d-flex align-items-center my-2">
+                        <img src="../../../assets/images/navbar-images/gas-station-svgrepo-com.svg" alt="">
+                        <div class="text d-flex w-100 justify-content-between">
+                            <div>Station
+                                Name</div>
+                            <div>NM</div>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <p-progressBar showValue="false" color="#B9CDE2" [value]="50" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
