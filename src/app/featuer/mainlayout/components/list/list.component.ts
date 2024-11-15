@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { fromEvent, interval, timer } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-
+  ngOnInit() {
+  }
 }

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid main overflow-hidden">
     <div class="row">
         <section class="col-md-9 ">
             <div class="container-fluid ">
@@ -24,17 +24,17 @@
                 <div class="d-flex my-3 justify-content-end px-5 ">
                     <section class="toggle-menue">
                         <mat-button-toggle-group name="dateToggle" aria-label="Date Filter" class="date-toggle-group"
-                            value="GRAPH" [hideSingleSelectionIndicator]="true">
-                            <mat-button-toggle routerLink="graph" value="GRAPH"><i
+                            [value]="toggleValue" [hideSingleSelectionIndicator]="true" (change)="change($event)">
+                            <mat-button-toggle routerLink="graph" value="/mainlayout/graph"><i
                                     class="fa-solid mx-2 fa-chart-simple"></i>
                                 GRAPH</mat-button-toggle>
-                            <mat-button-toggle routerLink="list" value="LIST"><i
+                            <mat-button-toggle routerLink="list" value="/mainlayout/list"><i
                                     class="fa-solid mx-2 fa-bars"></i>LIST</mat-button-toggle>
                         </mat-button-toggle-group>
                     </section>
                 </div>
             </div>
-            <div>
+            <div class="outlet">
                 <router-outlet></router-outlet>
             </div>
         </section>
